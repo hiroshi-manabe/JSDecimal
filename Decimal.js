@@ -1,7 +1,26 @@
 // Decimal.js
 // A class for handling decimal numbers with JavaScript.
 //
+// License: MIT (see LICENCE.md)
+//
+// Instance methods:
+//
+// Constructor(v) [v: String/Number/Decimal]
+// add(another)
+// sub(another)
+// mul(another)
+// div(another)
+// compare(another)
+// isZero()
+// toString()
+// toFloat()
+//
+// Class method:
+//
+// round(obj, digits, mode)
+//
 // Sample:
+//
 // var a = new Decimal("0.1");
 // var b = a.mul("0.2");  // b <- 0.02
 // var c = b.sub("0.3");  // c <- -0.28
