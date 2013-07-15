@@ -1,3 +1,14 @@
+// Decimal.js
+// A class for handling decimal numbers with JavaScript.
+//
+// Sample:
+// var a = new Decimal("0.1");
+// var b = a.mul("0.2");  // b <- 0.02
+// var c = b.sub("0.3");  // c <- -0.28
+// var d = c.div("0.4");  // d <- -0.7
+// var str = d.toString();  // str <- "0.7"
+// var num = d.toFloat();  // num <- 0.7
+//
 function Decimal(v) {
     if (!v) {
         this.sig = Array(Decimal.n);
