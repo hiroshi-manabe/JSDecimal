@@ -2,7 +2,7 @@ JSDecimal
 =========
 
 A JavaScript implementation of the decimal type.
-Compatible (well, almost) with the "decimal type" of the ECMA-334 (C# Language Specification, 4th edition).
+Compatible with the "decimal type" of the ECMA-334 (C# Language Specification, 4th edition).
 
 Specification
 =============
