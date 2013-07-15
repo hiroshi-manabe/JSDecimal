@@ -548,6 +548,8 @@ Decimal.prototype.div = function(another) {
     return Decimal.fromData(result_sig, result_exp,
                              this.is_minus != another_decimal.is_minus);
 };
+
+// tests; remove them when you use the Decimal class
 console.log("(new Decimal(\"-0\")).toString() == \"0\": " + ((new Decimal("-0")).toString() == "0" ? "OK" : "FAILED"));
 console.log("(new Decimal(\"0.3\")).sub((new Decimal(\"0.1\")).mul(3)).toString() == \"0\": " + ((new Decimal("0.3")).sub((new Decimal("0.1")).mul(3)).toString() == "0" ? "OK" : "FAILED"));
 console.log("(new Decimal(\"9999999999999999999999999999\")).add(\"1\").toString() == \"10000000000000000000000000000\": " + ((new Decimal("9999999999999999999999999999")).add("1").toString() == "10000000000000000000000000000" ? "OK" : "FAILED"));
