@@ -30,7 +30,11 @@ The Decimal class has a class method.
 
     round(obj, digits, mode)
 
-The functionalities of this method is the same as the .NET version. For example, if you want to round off a number to the second decimal place, you can do so by writing something like: Decimal.round(new Decimal(1.234), 2, Decimal.MidpointRounding.AwayFromZero). This returns a Decimal object with the value of 1.23.
+The functionalities of this method is the same as the .NET version. For example, if you want to round off a number to the second decimal place, you can do so by writing something like:
+
+    Decimal.round(Decimal(1.234), 2, Decimal.MidpointRounding.AwayFromZero)
+
+This returns a Decimal object with the value of 1.23.
 
 Specification
 =============
