@@ -1,6 +1,7 @@
 var Decimal = Decimal || require('../lib/decimal.js');
 var assert = assert || require('assert');
 
+assert.equal((Decimal.round(new Decimal(0), 8, Decimal.MidpointRounding.ToEven)).toString(), "0", "(Decimal.round(new Decimal(0), 8, Decimal.MidpointRounding.ToEven)).toString() == \"0\" FAILED")
 assert.equal((new Decimal("8")).sub("0").toString(), "8", "(new Decimal(\"8\").sub(\"0\").toString() == \"8\" FAILED")
 assert.equal((new Decimal("-0")).toString(), "0", "(new Decimal(\"-0\")).toString() == \"0\" FAILED")
 assert.equal((new Decimal("0.3")).sub((new Decimal("0.1")).mul(3)).toString(), "0", "(new Decimal(\"0.3\")).sub((new Decimal(\"0.1\")).mul(3)).toString() == \"0\" FAILED")
