@@ -47,4 +47,4 @@ This implementation makes the Decimal Type less prone to round-off errors when h
 
 Numbers represented by the Decimal Type have 28-digits precision. This means the least significant bits will be rounded off in some calculations. For example, Decimal(1).div(7).toString() gives "0.1428571428571428571428571429" (with 28 significant digits), but when you add 1 to it, the last "9" is rounded up and the result will be "1.142857142857142857142857143".
 
-For Decimals with an absolute value less than 1, the value is exact to "28th decimal place". This means Decimal(1).div("700000000000000000000").toString() will give a result of "0.0000000000000000000014285714" (exact to 28th decimal place) and not "0.000000000000000000001428571428571428571428571429" (with 28 valid numbers).
+For Decimals with an absolute value less than 1, the value is exact to "28th decimal place". This means Decimal(1).div("700000000000000000000").toString() will give a result of "0.0000000000000000000014285714" (exact to 28th decimal place) and not "0.000000000000000000001428571428571428571428571429" (with 28 significant digits).
