@@ -24,7 +24,7 @@ The instance methods of the Decimal type is as follows:
 
 I think their functionalities are self-explanatory.
 
-All other instance methods are private supposed to be used internally; when you use them, do so at your own risk.
+All other instance methods are private and supposed to be used internally; when you use them, do so at your own risk.
 
 The Decimal class has a class method.
 
