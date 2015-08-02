@@ -1,6 +1,12 @@
 var Decimal = Decimal || require('../lib/decimal.js');
 var assert = assert || require('assert');
 
+assert.equal((new Decimal("0")).neg().toString(), "0", "(new Decimal(\"0\")).neg().toString() == \"0\" FAILED")
+assert.equal((new Decimal("-3.8")).neg().toString(), "3.8", "(new Decimal(\"-3.8\")).neg().toString() == \"3.8\" FAILED")
+assert.equal((new Decimal("3.8")).neg().toString(), "-3.8", "(new Decimal(\"3.8\")).neg().toString() == \"-3.8\" FAILED")
+assert.equal((new Decimal("-3.8")).abs().toString(), "3.8", "(new Decimal(\"-3.8\")).abs().toString() == \"3.8\" FAILED")
+assert.equal((new Decimal("3.8")).abs().toString(), "3.8", "(new Decimal(\"3.8\")).abs().toString() == \"3.8\" FAILED")
+assert.equal((new Decimal("0")).abs().toString(), "0", "(new Decimal(\"0\")).abs().toString() == \"0\" FAILED")
 assert.equal((new Decimal("3.8")).floor().toString(), "3", "(new Decimal(\"3.8\")).floor().toString() == \"3\" FAILED")
 assert.equal((new Decimal("3156801.02869")).floor().toString(), "3156801", "(new Decimal(\"3156801.02869\")).floor().toString() == \"3156801\" FAILED")
 assert.equal((new Decimal("3.8")).ceil().toString(), "4", "(new Decimal(\"3.8\")).ceil().toString() == \"4\" FAILED")

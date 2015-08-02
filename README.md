@@ -21,6 +21,8 @@ The instance methods of the Decimal type is as follows:
     mod(other)
     floor()
     ceil()
+    neg()
+    abs()
     isZero()
     toString()
     toFloat()
