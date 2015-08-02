@@ -15,14 +15,11 @@ The instance methods of the Decimal type is as follows:
 
     add(other)
     sub(other)
+    compare(other)
     mul(other)
     div(other)
-    compare(other)
     mod(other)
-    floor()
-    ceil()
     neg()
-    abs()
     isZero()
     toString()
     toFloat()
@@ -31,13 +28,17 @@ I think their functionalities are self-explanatory.
 
 All other instance methods are private and supposed to be used internally; when you use them, do so at your own risk.
 
-The Decimal class has a class method.
+The Decimal class has following class methods:
 
-    round(obj, digits, mode)
+    Abs(obj)
+    Ceil(obj)
+    Floor(obj)
+    Round(obj, digits, mode)
+    Truncate(obj)
 
-The functionalities of this method is the same as the .NET version. For example, if you want to round off a number to the second decimal place, you can do so by writing something like:
+The functionalities of Round() is the same as the .NET version. For example, if you want to round off a number to the second decimal place, you can do so by writing something like:
 
-    Decimal.round(Decimal(1.234), 2, Decimal.MidpointRounding.AwayFromZero)
+    Decimal.Round(Decimal(1.234), 2, Decimal.MidpointRounding.AwayFromZero)
 
 This returns a Decimal object with the value of 1.23.
 
