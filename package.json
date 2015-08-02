@@ -1,6 +1,6 @@
 {
   "name": "jsdecimal",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "A JavaScript implementation of the decimal type. Compatible with the \"decimal type\" of the ECMA-334 (C# Language Specification, 4th edition).",
   "main": "./lib/decimal.js",
   "repository": {
