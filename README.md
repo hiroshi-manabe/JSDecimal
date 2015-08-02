@@ -13,11 +13,14 @@ You can build a Decimal object by a String, a Number or an existing Decimal obje
 
 The instance methods of the Decimal type is as follows:
 
-    add(another)
-    sub(another)
-    mul(another)
-    div(another)
-    compare(another)
+    add(other)
+    sub(other)
+    mul(other)
+    div(other)
+    compare(other)
+    mod(other)
+    floor()
+    ceil()
     isZero()
     toString()
     toFloat()
