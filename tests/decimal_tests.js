@@ -1,6 +1,18 @@
 var Decimal = Decimal || require('../lib/decimal.js');
 var assert = assert || require('assert');
 
+assert.equal((new Decimal("3.8")).floor().toString(), "3", "(new Decimal(\"3.8\")).floor().toString() == \"3\" FAILED")
+assert.equal((new Decimal("3156801.02869")).floor().toString(), "3156801", "(new Decimal(\"3156801.02869\")).floor().toString() == \"3156801\" FAILED")
+assert.equal((new Decimal("3.8")).ceil().toString(), "4", "(new Decimal(\"3.8\")).ceil().toString() == \"4\" FAILED")
+assert.equal((new Decimal("3156801.02869")).ceil().toString(), "3156802", "(new Decimal(\"3156801.02869\")).ceil().toString() == \"3156802\" FAILED")
+assert.equal((new Decimal("-3.8")).floor().toString(), "-3", "(new Decimal(\"-3.8\")).floor().toString() == \"-3\" FAILED")
+assert.equal((new Decimal("-3156801.02869")).floor().toString(), "-3156801", "(new Decimal(\"-3156801.02869\")).floor().toString() == \"-3156801\" FAILED")
+assert.equal((new Decimal("-3.8")).ceil().toString(), "-4", "(new Decimal(\"-3.8\")).ceil().toString() == \"-4\" FAILED")
+assert.equal((new Decimal("-3156801.02869")).ceil().toString(), "-3156802", "(new Decimal(\"-3156801.02869\")).ceil().toString() == \"-3156802\" FAILED")
+assert.equal((new Decimal("999999999999999999999999999.9")).ceil().toString(), "1000000000000000000000000000", "(new Decimal(\"999999999999999999999999999.9\")).ceil().toString() == \"1000000000000000000000000000\" FAILED")
+assert.equal((new Decimal("1.000000000000000000000000000")).ceil().toString(), "1", "(new Decimal(\"1.000000000000000000000000000\")).ceil().toString() == \"1\" FAILED")
+assert.equal((new Decimal("1.000000000000000000000000001")).ceil().toString(), "2", "(new Decimal(\"1.000000000000000000000000000\")).ceil().toString() == \"2\" FAILED")
+assert.equal((new Decimal(8)).mod(3).toString(), "2", "(new Decimal(8)).mod(3).toString() == \"2\" FAILED")
 assert.equal((new Decimal(-1)).add(1).compare(0).toString(), "0", "(new Decimal(-1)).add(1).compare(0).toString() == \"0\" FAILED")
 assert.equal((Decimal.round(new Decimal(0), 8, Decimal.MidpointRounding.ToEven)).toString(), "0", "(Decimal.round(new Decimal(0), 8, Decimal.MidpointRounding.ToEven)).toString() == \"0\" FAILED")
 assert.equal((new Decimal("8")).sub("0").toString(), "8", "(new Decimal(\"8\").sub(\"0\").toString() == \"8\" FAILED")
