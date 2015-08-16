@@ -1,6 +1,10 @@
 var Decimal = Decimal || require('../lib/decimal.js');
 var assert = assert || require('assert');
 
+assert.equal((new Decimal("443534569034876.12345678901235")).toString(), "443534569034876.1234567890124", "(new Decimal(\"443534569034876.12345678901235\")).toString() == \"443534569034876.1234567890124\" FAILED")
+assert.equal((new Decimal("443534569034876.12345678901245")).toString(), "443534569034876.1234567890124", "(new Decimal(\"443534569034876.12345678901245\")).toString() == \"443534569034876.1234567890124\" FAILED")
+assert.throws(function() { new Decimal("9999999999999999999999999999.5"); }, Decimal.OverflowError)
+assert.doesNotThrow(function() { new Decimal("9999999999999999999999999999.4"); }, Decimal.OverflowError)
 assert.equal((new Decimal("0")).neg().toString(), "0", "(new Decimal(\"0\")).neg().toString() == \"0\" FAILED")
 assert.equal((new Decimal("-3.8")).neg().toString(), "3.8", "(new Decimal(\"-3.8\")).neg().toString() == \"3.8\" FAILED")
 assert.equal((new Decimal("3.8")).neg().toString(), "-3.8", "(new Decimal(\"3.8\")).neg().toString() == \"-3.8\" FAILED")
