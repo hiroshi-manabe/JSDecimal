@@ -1,6 +1,10 @@
 var Decimal = Decimal || require('../lib/decimal.js');
 var assert = assert || require('assert');
 
+assert.equal((Decimal.Round(new Decimal(0.5), 0, Decimal.MidpointRounding.AwayFromZero)).toString(), "1", "(Decimal.Round(new Decimal(0.5), 0, Decimal.MidpointRounding.AwayFromZero)).toString() == \"1\" FAILED")
+assert.equal((Decimal.Round(new Decimal(0.5), 0, Decimal.MidpointRounding.ToEven)).toString(), "0", "(Decimal.Round(new Decimal(0.5), 0, Decimal.MidpointRounding.ToEven)).toString() == \"0\" FAILED")
+assert.equal((Decimal.Round(new Decimal(0.05), 1, Decimal.MidpointRounding.AwayFromZero)).toString(), "0.1", "(Decimal.Round(new Decimal(0.05), 0, Decimal.MidpointRounding.AwayFromZero)).toString() == \"0.1\" FAILED")
+assert.equal((Decimal.Round(new Decimal(0.05), 1, Decimal.MidpointRounding.ToEven)).toString(), "0", "(Decimal.Round(new Decimal(0.05), 0, Decimal.MidpointRounding.ToEven)).toString() == \"0\" FAILED")
 assert.equal((new Decimal("443534569034876.12345678901235")).toString(), "443534569034876.1234567890124", "(new Decimal(\"443534569034876.12345678901235\")).toString() == \"443534569034876.1234567890124\" FAILED")
 assert.equal((new Decimal("443534569034876.12345678901245")).toString(), "443534569034876.1234567890124", "(new Decimal(\"443534569034876.12345678901245\")).toString() == \"443534569034876.1234567890124\" FAILED")
 assert.throws(function() { new Decimal("9999999999999999999999999999.5"); }, Decimal.OverflowError)
